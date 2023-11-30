@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'Jenkins-Agent' }
+    agent { label 'jenkins-agent-virtual-techBox' }
     tools {
         jdk 'java17'
         maven 'Maven3'
@@ -22,7 +22,7 @@ pipeline {
 
         stage("Checkout from SCM"){
                 steps {
-                    git branch: 'main', credentialsId: 'github', url: 'https://github.com/Ashfaque-9x/register-app'
+                    git branch: 'main', credentialsId: 'github', url: 'https://github.com/la-belle-femme/register-app'
                 }
         }
 
